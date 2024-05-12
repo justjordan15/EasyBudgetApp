@@ -122,7 +122,6 @@ while True:
 #Do the budget calculations based on the budget period input
 #Use a list to branch into each calculation and output
 #If user does not make enough to budget for the time frame selected tell them how much they are short
-#FIXME: Check print out of income after expense if it is negative
 if budget_period in ['Weekly', 'week', 'Week', 'weekly']:
     week = mthly_including_weekly / 4
     income_after_expense = user_income - week
@@ -380,20 +379,6 @@ if income_after_expense > 0:
             print(f'Income this period: ${user_income:.2f}')
             print(f'Income After expenses: ${income_after_expense:.2f}')
             print()
-
-
-
-
-
-
-#else:
-    #if income_after_expense < 0:
-        #print('You are here')
-     ##   if budget_period in ['Weekly', 'weekly', 'week', 'Week']:
-
-
-#FIXME: Write an Else branch for the if statement for when the user income after expesense is less than 0`
-#PHYSICALLY DRAW THE DESIRED PRINT OUT OF THE BUDGET OVERVIEW
 
 
 
