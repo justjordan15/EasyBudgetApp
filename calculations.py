@@ -40,7 +40,7 @@ print()
 print('Monthly Expense          Amount')
 print('--------------------------------')
 for name_of_expense, price in monthly_expense_values.items():
-    print(f'    {name_of_expense}                 {price:.2f}')
+    print(f'    {name_of_expense}                ${price:.2f}')
 print(f'                  Total: ${total_monthly_expense:.2f}')
 print()
 print()
@@ -138,7 +138,7 @@ if budget_period in ['Weekly', 'week', 'Week', 'weekly']:
         print(f'Amount needed to budget for week: {week:.2f}')
         print(f'Income this period: ${user_income:.2f}')
         print(f'Week Expense: -${week:.2f}')
-        print(f'Loss: -${income_after_expense:.2f}')
+        print(f'Loss: -${-income_after_expense:.2f}')
     else:
         print()
         print(f'You need to put aside ${week:.2f} per week to make your monthly bills. '
@@ -160,7 +160,7 @@ elif budget_period in ['bi-weekly', 'biweekly', 'Bi-Weekly', 'Bi-weekly', 'Biwee
         print(f'Amount needed to budget bi-weekly: {biweekly:.2f}')
         print(f'Income this period: ${user_income:.2f}')
         print(f'Week Expense: -${biweekly:.2f}')
-        print(f'Loss: -${income_after_expense:.2f}')
+        print(f'Loss: -${-income_after_expense:.2f}')
     else:
         print()
         print(f'You need to put aside ${biweekly:.2f} from your bi-weekly pay to make your monthly bills.'
@@ -181,7 +181,7 @@ elif budget_period in ['Monthly', 'monthly', 'Month', 'month']:
         print(f'Amount needed to budget for a month: {mthly_including_weekly:.2f}')
         print(f'Income this period: ${user_income:.2f}')
         print(f'Week Expense: -${mthly_including_weekly:.2f}')
-        print(f'Loss: -${income_after_expense:.2f}')
+        print(f'Loss: -${-income_after_expense:.2f}')
     else:
         print()
         print(f'You need to put aside ${mthly_including_weekly:.2f} to make your monthly bills.'
@@ -203,7 +203,7 @@ elif budget_period in ['Year', 'Yearly', 'year', 'yearly']:
         print(f'Amount needed to budget for a year: {year:.2f}')
         print(f'Income this period: ${user_income:.2f}')
         print(f'Week Expense: -${mthly_including_weekly * 12:.2f}')
-        print(f'Loss: -${income_after_expense:.2f}')
+        print(f'Loss: -${-income_after_expense:.2f}')
     else:
         print()
         print(f'You need to put aside ${year:.2f} to pay your monthly bills for a year.'
